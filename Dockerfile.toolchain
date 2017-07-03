@@ -8,3 +8,5 @@ ARG GIT_TAG=2017.05
 COPY configs/$CONFIG buildroot/configs
 
 RUN cd buildroot && git checkout $GIT_TAG && make $CONFIG && make toolchain
+
+WORKDIR buildroot
