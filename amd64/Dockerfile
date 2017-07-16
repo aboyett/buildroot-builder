@@ -1,4 +1,4 @@
-FROM quay.io/agb/buildroot-builder
+FROM quay.io/agb/buildroot-builder:builder_tree-b2375497008a534b6e3f014a2f55632661d990da
 
 RUN git clone https://github.com/buildroot/buildroot
 
