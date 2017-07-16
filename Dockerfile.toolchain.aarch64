@@ -1,0 +1,10 @@
+FROM quay.io/agb/buildroot-builder
+
+RUN git clone https://github.com/buildroot/buildroot
+
+ARG CONFIG=raspberrypi3_64_defconfig
+ARG GIT_TAG=2017.05.1
+
+RUN cd buildroot && git checkout $GIT_TAG && make $CONFIG && make toolchain
+
+WORKDIR buildroot
