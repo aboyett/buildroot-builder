@@ -1,9 +1,9 @@
-FROM quay.io/agb/buildroot-builder:builder_tree-b2375497008a534b6e3f014a2f55632661d990da
+FROM quay.io/agb/buildroot-builder:builder_tree-4da42e73c0578a10e79dc54dd1893a677c26a5ea
 
 RUN git clone https://github.com/buildroot/buildroot
 
 ARG CONFIG=qemu_x86_64_musl_defconfig
-ARG GIT_TAG=2017.05
+ARG GIT_TAG=2017.08
 
 COPY configs/$CONFIG buildroot/configs
 
